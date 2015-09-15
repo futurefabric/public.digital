@@ -37,10 +37,10 @@ body {
 	font-style: normal;
 	color: $white;
   margin:0;
-  padding:30px 15px;
+  padding:15px;
 
   @include media(desktop) {
-    padding:30px 20px 20px $left-margin;
+    padding:15px 0 20px $left-margin;
   }
 }
 
@@ -49,26 +49,37 @@ main {
 }
 
 header {
-  color:$white;
   border-bottom:1px solid $brand-blue-alpha;
-  padding:0 0 15px 0;
+  height:55px;
 
   @include media(desktop) {
-    padding:0;
+    height:65px;
   }
 
   h1 {
-    text-indent:-5000px;
-    background-image:url(../images/public.digital.logo.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width:75px;
-    margin:0;
-
-    @include media(desktop) {
-      width:90px;
-      height:65px;
-    }
+  	position:relative;
+	  font-size: 20px;
+	  font-family: $font_bold;
+		margin:0;
+		
+		.public {
+			position:absolute;
+		}
+		
+		.digital {
+			position:absolute;
+			top:16px;
+			left:12px;
+		}
+		
+	  @include media(desktop) {
+	    font-size: 24px;
+	    
+	    .digital {
+				top:20px;
+				left:14px;
+			}
+	  }
   }
 }
 
@@ -89,7 +100,7 @@ ul.disciplines {
   li {
 
     font-size: 40px;
-    line-height: 50px;
+    line-height: 46px;
     font-family:$font_bold;
 
     @include media(tablet) {
@@ -123,6 +134,9 @@ a:active,
 a:visited {
   text-decoration:none;
   color:$white;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAMAAACbgxyhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAAA5JREFUeNpiYCASAAQYAAApAAHHJj5mAAAAAElFTkSuQmCC');
+    background-repeat: repeat-x;
+    background-position: 0 93%;
 }
 
 ::selection {
