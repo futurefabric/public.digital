@@ -89,7 +89,7 @@ header {
 
 ul.disciplines {
 
-  display:inline-block;
+  display:none;
   margin-bottom: 60px;
   margin-top:70px;
 
@@ -113,6 +113,13 @@ ul.disciplines {
     }
 
   }
+}
+
+
+.wf-newrailalphabetbold-n7-active {
+	ul.disciplines {
+		display:inline-block;
+	}
 }
 
 .wrapper {
