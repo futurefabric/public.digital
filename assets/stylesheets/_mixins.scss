@@ -1,0 +1,57 @@
+@mixin link_border($color:$black, $weight:1px) {
+  border-bottom:$weight solid $color;
+}
+
+@mixin bold() {
+  font-family:$font_bold;
+}
+
+@mixin debug {
+  background-color:#ccc;
+  min-height:50px;
+}
+
+@mixin media($size: false) {
+	// $size can be: cinema, desktop_large, desktop, tablet, mobile
+
+	@if $size == cinema {
+  	@media screen and (min-width: $cinema) {
+    	@content;
+    }
+  }
+
+	@if $size == desktop_large {
+  	@media screen and (min-width: $desktop_large) {
+    	@content;
+    }
+  }
+
+	@if $size == desktop {
+  	@media screen and (min-width: $desktop) {
+    	@content;
+    }
+  }
+
+  @else if $size == tablet {
+    @media screen and (min-width: $tablet) {
+    	@content;
+    }
+  }
+
+  @else if $size == mobile {
+    @media screen and (min-width: $mobile) {
+    	@content;
+    }
+  }
+}
+
+@mixin device-pixel-ratio($ratio: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (  -o-min-device-pixel-ratio: #{($ratio*10)}/10),
+  only screen and (     min-device-pixel-ratio: $ratio),
+  only screen and (             min-resolution: #{($ratio*96)}dpi),
+  only screen and (             min-resolution: #{$ratio}dppx) {
+    @content;
+  }
+}

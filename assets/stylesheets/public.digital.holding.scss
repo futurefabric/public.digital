@@ -1,0 +1,135 @@
+
+@import '_normalize.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+
+
+* {
+  box-sizing: border-box;
+  margin: 0; padding:0;
+}
+
+html {
+  height:100%;
+	-webkit-text-size-adjust:none;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	image-rendering:optimizeQuality;
+	overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  height:100%;
+	background-color: $brand-blue;
+  background: rgba(0,159,227,1);
+  background: rgba(0,159,227,1);
+  background: -moz-linear-gradient(-45deg, rgba(0,159,227,1) 0%, rgba(0,83,227,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,159,227,1)), color-stop(100%, rgba(0,83,227,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(0,159,227,1) 0%, rgba(0,83,227,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(0,159,227,1) 0%, rgba(0,83,227,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(0,159,227,1) 0%, rgba(0,83,227,1) 100%);
+  background: linear-gradient(135deg, rgba(0,159,227,1) 0%, rgba(0,83,227,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009fe3', endColorstr='#0053e3', GradientType=1 );
+  background-attachment: fixed;
+  font-family: $font_reg;
+	font-weight: 200;
+	font-style: normal;
+	color: $white;
+  margin:0;
+  padding:30px 15px;
+
+  @include media(desktop) {
+    padding:30px 20px 20px $left-margin;
+  }
+}
+
+main {
+  width:100%;
+}
+
+header {
+  color:$white;
+  border-bottom:1px solid $brand-blue-alpha;
+  padding:0 0 15px 0;
+
+  @include media(desktop) {
+    padding:0;
+  }
+
+  h1 {
+    text-indent:-5000px;
+    background-image:url(../images/public.digital.logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width:75px;
+    margin:0;
+
+    @include media(desktop) {
+      width:90px;
+      height:65px;
+    }
+  }
+}
+
+ul.disciplines {
+
+  display:inline-block;
+  margin-bottom: 50px;
+  margin-top:50px;
+
+  @include media(tablet) {
+    margin-left:80px;
+  }
+
+  @include media(desktop) {
+    margin-left:120px;
+  }
+
+  li {
+
+    font-size: 40px;
+    line-height: 50px;
+    font-family:$font_bold;
+
+    @include media(tablet) {
+      font-size: 86px;
+      line-height: 92px;
+    }
+
+  }
+}
+
+footer {
+  width:100%;
+  position:absolute;
+  bottom:25px;
+}
+
+p {
+  font-size: 20px;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+
+  a {
+    font-family: $font_bold;
+  }
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration:none;
+  color:$white;
+}
+
+::selection {
+  color: $brand-blue;
+  background: $white;
+}
+::-moz-selection {
+  color: $brand-blue;
+  background: $white;
+}
