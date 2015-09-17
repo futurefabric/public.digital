@@ -99,20 +99,15 @@ ul.disciplines {
   display:none;
   border-left:5px solid $brand-blue-alpha;
   padding-left: 18px;
-  margin-bottom: 60px;
-  margin-top:130px;
+  margin:130px 0 60px 0;
 
   @include media(tablet) {
-    margin-left:160px;
-    margin-top:180px;
-    margin-bottom: 90px;
+    margin:180px 0 90px 160px;
     padding-left: 24px;
   }
 
   @include media(desktop) {
-    margin-left:260px;
-    margin-top:200px;
-    margin-bottom: 120px;
+    margin:200px 0 120px 260px;
     padding-left: 36px;
   }
 
