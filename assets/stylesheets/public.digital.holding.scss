@@ -91,6 +91,15 @@ header {
 				left:35px;
 			}
 	  }
+
+    @include media(cinema) {
+      font-size: 80px;
+
+	    .digital {
+				top:64px;
+				left:47px;
+			}
+    }
   }
 }
 
@@ -111,6 +120,16 @@ ul.disciplines {
     padding-left: 36px;
   }
 
+  @include media(desktop_large) {
+    margin:260px 0 120px 360px;
+    padding-left: 36px;
+  }
+
+  @include media(cinema) {
+    margin:300px 0 120px 450px;
+    padding-left: 36px;
+  }
+
   li {
     font-size: 36px;
     line-height: 42px;
@@ -124,6 +143,11 @@ ul.disciplines {
     @include media(desktop) {
       font-size: 60px;
       line-height: 66px;
+    }
+
+    @include media(cinema) {
+      font-size: 80px;
+      line-height: 86px;
     }
   }
 }
@@ -170,8 +194,8 @@ a:visited {
   text-decoration:none;
   color:$white;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAMAAACbgxyhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAAA5JREFUeNpiYCASAAQYAAApAAHHJj5mAAAAAElFTkSuQmCC');
-    background-repeat: repeat-x;
-    background-position: 0 93%;
+  background-repeat: repeat-x;
+  background-position: 0 93%;
 }
 
 ::selection {
